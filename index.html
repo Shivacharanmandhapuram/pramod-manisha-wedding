@@ -347,7 +347,7 @@
       background-color: #1a0000;
       background-image:
         radial-gradient(ellipse at 50% 30%, rgba(212, 175, 55, 0.16) 0%, transparent 58%),
-        url('./palace_door.png'),
+        url('./palace_door.jpg'),
         linear-gradient(160deg, #3b0000 0%, #1a0000 40%, #2e0000 100%);
       background-size: cover, cover, cover;
       background-repeat: no-repeat, no-repeat, no-repeat;
@@ -1522,7 +1522,10 @@
 
     .ty-bg {
       position: absolute;
-      inset: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-attachment: fixed;
       background-position: center;
       background-size: cover;
@@ -1531,10 +1534,20 @@
       background-color: var(--deep-ruby);
     }
 
+    @supports (-webkit-touch-callout: none) {
+      .ty-bg {
+        /* Fixes iOS Safari bug where 'cover' makes fixed backgrounds invisible */
+        background-size: auto 100vh;
+      }
+    }
+
     .ty-bg::after {
       content: '';
       position: absolute;
-      inset: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: linear-gradient(to bottom, rgba(44, 0, 0, 0.2), rgba(44, 0, 0, 0.82));
     }
 
@@ -2145,7 +2158,7 @@
     </div>
     <!-- Layer 1.5: Main Illustration -->
     <div class="hero-layer hero-layer-main" data-speed="0">
-      <img src="./cute_indian_.png" alt="Wedding Couple" class="main-img">
+      <img src="./cute_indian_small.png" alt="Wedding Couple" class="main-img">
     </div>
 
     <!-- Layer 2: Corners & Marigolds -->
@@ -2407,7 +2420,7 @@
       <div class="person-card reveal-left">
         <div class="photo-frame">
           <div class="photo-frame-inner">
-            <img src="./pramod.png" alt="Pramod Sagar" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="./pramod_small.png" alt="Pramod Sagar" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
         <div class="person-name" style="font-size: clamp(1.4rem, 3.5vw, 2.2rem);">Pramod Sagar</div>
@@ -2437,7 +2450,7 @@
       <div class="person-card reveal-right">
         <div class="photo-frame">
           <div class="photo-frame-inner">
-            <img src="./manisha.png" alt="Manisha Sagar" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="./manisha_small.png" alt="Manisha Sagar" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
         <div class="person-name" style="font-size: clamp(1.4rem, 3.5vw, 2.2rem);">Manisha Sagar</div>
@@ -2511,10 +2524,16 @@
         <div class="detail-text">
           <strong>Brindavan Gardens</strong><br>
           <span class="lang-te">బీరెల్లి రోడ్, గద్వాల</span>
-          <span class="lang-en">Beerelli Road, Gadwal</span><br><br>
-          <a href="https://share.google/jPUn2DXMOZYPqn7CJ" target="_blank" rel="noopener noreferrer"
-            style="display: inline-block; background: var(--vermilion); color: #fff; padding: 0.6rem 1rem; text-decoration: none; border-radius: 4px; font-size: 0.85rem; letter-spacing: 0.05em; margin-top: 0.5rem; transition: transform 0.2s;">
-            <span class="lang-te">మార్గం చూడండి</span><span class="lang-en">Open Location</span>
+          <span class="lang-en">Beerelli Road, Gadwal</span><br>
+          
+          <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+            src="https://maps.google.com/maps?q=Brindavan%20Gardens,%20Beerelli%20Road,%20Gadwal&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            style="border-radius: 6px; margin-top: 1rem; margin-bottom: 0.8rem; border: 1px solid rgba(212, 175, 55, 0.3);">
+          </iframe>
+          
+          <a href="https://www.google.com/maps/search/?api=1&query=Brindavan+Gardens,+Beerelli+Road,+Gadwal" target="_blank" rel="noopener noreferrer"
+            style="display: inline-block; width: 100%; text-align: center; background: var(--vermilion); color: #fff; padding: 0.7rem 1rem; text-decoration: none; border-radius: 4px; font-size: 0.85rem; letter-spacing: 0.05em; transition: transform 0.2s; box-sizing: border-box;">
+            <span class="lang-te">మ్యాప్స్ లో తెరవండి</span><span class="lang-en">Open in Maps App</span>
           </a>
         </div>
       </div>
@@ -2561,19 +2580,6 @@
         </div>
       </div>
 
-      <div class="detail-card reveal" id="gift-card">
-        <span class="detail-icon">🎁</span>
-        <div class="detail-title"><span class="lang-te">ఆశీర్వాదాలు</span><span class="lang-en">Blessings & Gifts</span>
-        </div>
-        <div class="detail-text">
-          <span class="dual-line">
-            <span class="lang-te">మీ హాజరు మరియు ఆశీర్వాదాలే మా కుటుంబానికి గొప్ప కానుక. ఎటువంటి బహుమతులు
-              ఆశించబడవు.</span>
-            <span class="lang-en">Your presence and blessings are the greatest gift to our family. No formal gifts are
-              expected.</span>
-          </span>
-        </div>
-      </div>
 
       <div class="detail-card reveal">
         <span class="detail-icon">🥻</span>
