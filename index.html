@@ -2688,13 +2688,13 @@
     </div>
     <div class="tamil-text" style="margin-bottom:2rem;opacity:0.7">
       <span class="lang-te">శుభమస్తు</span>
-      <span class="lang-en">Blessings always</span>
+<span class="lang-en">Blessings always</span>
     </div>
     <div class="footer-copy">Crafted with love for Pramod Sagar &amp; Manisha Sagar · 2026</div>
   </footer>
 
   <!-- YouTube hidden player -->
-  <div id="yt-player" style="display:none;position:absolute;width:0;height:0;overflow:hidden;" aria-hidden="true"></div>
+  <div id="yt-player" style="position:absolute;width:10px;height:10px;left:-9999px;top:-9999px;opacity:0.01;pointer-events:none;" aria-hidden="true"></div>
 
   <script>
     /* ========== LANGUAGE SELECTION ========== */
@@ -2917,9 +2917,9 @@
 
     window.onYouTubeIframeAPIReady = function () {
       player = new YT.Player('yt-player', {
-        height: '0', width: '0',
+        height: '10', width: '10',
         videoId: 'r5hSMSpb1Qs',
-        playerVars: { autoplay: 0, controls: 0, loop: 1, playlist: 'r5hSMSpb1Qs', start: 97 },
+        playerVars: { autoplay: 0, controls: 0, loop: 1, playlist: 'r5hSMSpb1Qs', start: 97, playsinline: 1 },
         events: {
           onReady: function () {
             isYtReady = true;
